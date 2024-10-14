@@ -1,0 +1,38 @@
+[OPTIONS]
+Compiled file=project1.chm
+Compatibility=1.1
+Full-text search=Yes
+Contents file=index.hhc
+Default Window=main
+Default topic=index.html
+Index file=index.hhk
+Language=0x409 English (United States)
+Title=Project 1
+
+[WINDOWS]
+main="Project 1","index.hhc","index.hhk","index.html","index.html",,,,,0x23520,,0x10387e,,,,,,,,0
+
+[FILES]
+main_8cpp.html
+graph_legend.html
+dir_1c2aea8a4d504af88ee2fbc1f2c347ce.html
+index.html
+files.html
+globals.html
+globals_func.html
+globals_vars.html
+tab_a.png
+tab_b.png
+tab_h.png
+tab_s.png
+nav_h.png
+nav_f.png
+bc_s.png
+doxygen.png
+closed.png
+open.png
+bdwn.png
+sync_on.png
+sync_off.png
+main_8cpp__incl.png
+graph_legend.png
