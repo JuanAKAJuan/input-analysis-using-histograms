@@ -2,6 +2,4 @@
 #include <string>
 #include <gl/glut.h>
 
-using namespace std;
-
-void printString(string str);
+void printString(float x, float y, std::string str);

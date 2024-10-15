@@ -9,6 +9,9 @@
 #include "utility.h"
 
 // Input data
+std::string filePath = "Data/";
+std::string fileName1 = "5.dat";
+std::string fileName2 = "18.dat";
 float* dataset;
 int numDataPoints;
 float minimum, maximum;
@@ -48,14 +51,33 @@ void computeExponentialFunc(float lamda) {
 }
 
 void display(void) {
-	/* clear all pixels */
-	glClear(GL_COLOR_BUFFER_BIT);
-	// Reset Modelview matrix.
-	glMatrixMode(GL_MODELVIEW);
+	glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 	glLoadIdentity();
-	glLineWidth(1);
-	glColor3f(1, 1, 1);
+
+	glLineWidth(2.0f);
+
 	// Draw x and y axes
+	glBegin(GL_LINES);
+
+	glColor3f(1.0f, 1.0f, 1.0f);
+	glVertex2f(0.05f, 0.05f);
+	glVertex2f(0.95f, 0.05f); // Extend to the right (positive X)
+
+	glColor3f(1.0f, 1.0f, 1.0f);
+	glVertex2f(0.05f, 0.05f);
+	glVertex2f(0.05f, 0.95f); // Extend upwards (positive Y)
+
+	glEnd();
+
+	printString(0.90f, 0.06f, "Data"); // X
+	printString(0.06f, 0.93f, "Probability Density"); // Y
+
+	glColor3f(0.0f, 1.0f, 0.0f);
+	printString(0.75f, 0.93f, "File: " + fileName1);
+	printString(0.75f, 0.90f, "Min: " + std::to_string(minimum));
+	printString(0.75f, 0.87f, "Max: " + std::to_string(maximum));
+	printString(0.75f, 0.84f, "Num of Intervals: " + std::to_string(numIntervals));
+	
 	// Display the maximum probability value
 	// Draw probability histogram
 	// Draw the theoretical distribution using thicker lines.
@@ -86,7 +108,7 @@ void computeProbability(int numIntervals) {
 void readFile(std::string fileName) {
 	std::ifstream inFile(fileName);
 	if (!inFile.is_open()) {
-		cout << fileName << " couldn't be opened.\n";
+		std::cout << fileName << " couldn't be opened.\n";
 		system("pause");
 		exit(1);
 	}
@@ -159,23 +181,34 @@ void createMenu() {
 }
 
 void reshape(int w, int h) {
-	// Set matrix mode and projection.
+	glViewport(0, 0, w, h);
+
+	glMatrixMode(GL_PROJECTION);
+	glLoadIdentity();
+
+	// Setup a 2D orthographic projection (left, right, bottom, top)
+	gluOrtho2D(0.0, 1.0, 0.0, 1.0); // Bottom-left corner is (0,0), top-right is (1,1)
+
+	glMatrixMode(GL_MODELVIEW);
+	glLoadIdentity();
 }
 
 int main(int argc, char** argv) {
-	std::string fileName1 = "Data/5.dat";
-	std::string fileName2 = "Data/18.dat";
-	readFile(fileName1);
-	readFile(fileName2);
+	readFile(filePath + fileName1);
 
 	glutInit(&argc, argv);
-	glutInitDisplayMode(GLUT_SINGLE | GLUT_RGB);
+	glutInitDisplayMode(GLUT_SINGLE | GLUT_RGB | GLUT_DEPTH);
 	glutInitWindowSize(width, height);
 	glutInitWindowPosition(100, 100);
 	glutCreateWindow("Input Analysis");
+
 	glewInit();
 	init();
+
+	glEnable(GL_DEPTH_TEST);
 	glutDisplayFunc(display);
+	glutReshapeFunc(reshape);
+
 	glutMainLoop();
 	return 0;
 }
