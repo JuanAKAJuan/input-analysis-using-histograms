@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.13"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Project 1: Project 1/main.cpp File Reference</title>
+<title>Project 1: input-analysis-using-histograms/Project 1/main.cpp File Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -37,11 +37,12 @@ $(function() {
 <div id="main-nav"></div>
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="dir_1c2aea8a4d504af88ee2fbc1f2c347ce.html">Project 1</a></li>  </ul>
+<li class="navelem"><a class="el" href="dir_27a0c68f03aef38652fe29ec7feec8c4.html">input-analysis-using-histograms</a></li><li class="navelem"><a class="el" href="dir_6054db785502c4211a535521fedbfad4.html">Project 1</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
   <div class="summary">
+<a href="#define-members">Macros</a> &#124;
 <a href="#func-members">Functions</a> &#124;
 <a href="#var-members">Variables</a>  </div>
   <div class="headertitle">
@@ -49,121 +50,170 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 <div class="textblock"><code>#include &lt;iostream&gt;</code><br />
+<code>#include &lt;iomanip&gt;</code><br />
 <code>#include &lt;fstream&gt;</code><br />
 <code>#include &lt;sstream&gt;</code><br />
 <code>#include &lt;string&gt;</code><br />
 <code>#include &lt;cfloat&gt;</code><br />
-<code>#include &lt;cmath&gt;</code><br />
-<code>#include &lt;gl/glew.h&gt;</code><br />
+<code>#include &lt;GL/glew.h&gt;</code><br />
 <code>#include &lt;GL/glut.h&gt;</code><br />
-<code>#include &quot;utility.h&quot;</code><br />
+<code>#include &quot;<a class="el" href="utility_8h_source.html">utility.h</a>&quot;</code><br />
+<code>#include &lt;math.h&gt;</code><br />
 </div><div class="textblock"><div class="dynheader">
 Include dependency graph for main.cpp:</div>
 <div class="dyncontent">
-<div class="center"><img src="main_8cpp__incl.png" border="0" usemap="#_project_011_2main_8cpp" alt=""/></div>
-<map name="_project_011_2main_8cpp" id="_project_011_2main_8cpp">
+<div class="center"><img src="main_8cpp__incl.png" border="0" usemap="#input-analysis-using-histograms_2_project_011_2main_8cpp" alt=""/></div>
+<map name="input-analysis-using-histograms_2_project_011_2main_8cpp" id="input-analysis-using-histograms_2_project_011_2main_8cpp">
+<area shape="rect" id="node10" href="utility_8h.html" title="utility.h" alt="" coords="707,109,771,136"/>
 </map>
 </div>
 </div><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
+Macros</h2></td></tr>
+<tr class="memitem:a525335710b53cb064ca56b936120431e"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8cpp.html#a525335710b53cb064ca56b936120431e">_USE_MATH_DEFINES</a></td></tr>
+<tr class="separator:a525335710b53cb064ca56b936120431e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:a61e906382bb4ca6502934aac20f7e362"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8cpp.html#a61e906382bb4ca6502934aac20f7e362">computeNormalFunc</a> (float <a class="el" href="main_8cpp.html#a4df8d1d064e0269c44c34fd4a7a3b705">mu</a>, float <a class="el" href="main_8cpp.html#ae11aeeb83e22b5b7f1e6b4347eb1daa6">sigma</a>)</td></tr>
-<tr class="separator:a61e906382bb4ca6502934aac20f7e362"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae673a5db5ae9b0c651b452316de53071"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8cpp.html#ae673a5db5ae9b0c651b452316de53071">computeExponentialFunc</a> (float <a class="el" href="main_8cpp.html#ab53db8e89ce5e334bfc0b19b65e9cc85">lamda</a>)</td></tr>
-<tr class="separator:ae673a5db5ae9b0c651b452316de53071"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4ea013001a5fb47853d0fab8f8de35cd"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8cpp.html#a4ea013001a5fb47853d0fab8f8de35cd">display</a> (void)</td></tr>
+<tr class="memdesc:a4ea013001a5fb47853d0fab8f8de35cd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Display callback function for rendering the histogram and theoretical distribution.  <a href="#a4ea013001a5fb47853d0fab8f8de35cd">More...</a><br /></td></tr>
 <tr class="separator:a4ea013001a5fb47853d0fab8f8de35cd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2858154e2009b0e6e616f313177762bc"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8cpp.html#a2858154e2009b0e6e616f313177762bc">init</a> (void)</td></tr>
+<tr class="memdesc:a2858154e2009b0e6e616f313177762bc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initializes OpenGL settings.  <a href="#a2858154e2009b0e6e616f313177762bc">More...</a><br /></td></tr>
 <tr class="separator:a2858154e2009b0e6e616f313177762bc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0931fb7723884495fa0f9cc9abb06fcd"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8cpp.html#a0931fb7723884495fa0f9cc9abb06fcd">computeProbability</a> (int <a class="el" href="main_8cpp.html#af5940e5a8d7b14482b65dab997f77f5a">numIntervals</a>)</td></tr>
+<tr class="memdesc:a0931fb7723884495fa0f9cc9abb06fcd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Computes the probabilities for the histogram based on the dataset and number of intervals.  <a href="#a0931fb7723884495fa0f9cc9abb06fcd">More...</a><br /></td></tr>
 <tr class="separator:a0931fb7723884495fa0f9cc9abb06fcd"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1d2c4747132d1e5f8a236046d2a3442f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8cpp.html#a1d2c4747132d1e5f8a236046d2a3442f">readFile</a> (string fileName)</td></tr>
-<tr class="separator:a1d2c4747132d1e5f8a236046d2a3442f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a61e906382bb4ca6502934aac20f7e362"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8cpp.html#a61e906382bb4ca6502934aac20f7e362">computeNormalFunc</a> (float <a class="el" href="main_8cpp.html#a4df8d1d064e0269c44c34fd4a7a3b705">mu</a>, float <a class="el" href="main_8cpp.html#ae11aeeb83e22b5b7f1e6b4347eb1daa6">sigma</a>)</td></tr>
+<tr class="memdesc:a61e906382bb4ca6502934aac20f7e362"><td class="mdescLeft">&#160;</td><td class="mdescRight">Computes the points for the normal distribution curve.  <a href="#a61e906382bb4ca6502934aac20f7e362">More...</a><br /></td></tr>
+<tr class="separator:a61e906382bb4ca6502934aac20f7e362"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad061a8419a9975970ffc0991b9891e5f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8cpp.html#ad061a8419a9975970ffc0991b9891e5f">computeExponentialFunc</a> (float <a class="el" href="main_8cpp.html#acac4a565486bad0b88b62387d8a5d891">lambda</a>)</td></tr>
+<tr class="memdesc:ad061a8419a9975970ffc0991b9891e5f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Computes the points for the exponential distribution curve.  <a href="#ad061a8419a9975970ffc0991b9891e5f">More...</a><br /></td></tr>
+<tr class="separator:ad061a8419a9975970ffc0991b9891e5f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2a6db4d94910ad759d5ae53b11f7daef"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8cpp.html#a2a6db4d94910ad759d5ae53b11f7daef">computeMean</a> (float *data, int size)</td></tr>
+<tr class="memdesc:a2a6db4d94910ad759d5ae53b11f7daef"><td class="mdescLeft">&#160;</td><td class="mdescRight">Computes the mean (average) of the given data array.  <a href="#a2a6db4d94910ad759d5ae53b11f7daef">More...</a><br /></td></tr>
+<tr class="separator:a2a6db4d94910ad759d5ae53b11f7daef"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a556823fe870225f1b3f79492eeb264ab"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8cpp.html#a556823fe870225f1b3f79492eeb264ab">computeStandardDeviation</a> (float *data, int size, float mean)</td></tr>
+<tr class="memdesc:a556823fe870225f1b3f79492eeb264ab"><td class="mdescLeft">&#160;</td><td class="mdescRight">Computes the standard deviation of the given data array.  <a href="#a556823fe870225f1b3f79492eeb264ab">More...</a><br /></td></tr>
+<tr class="separator:a556823fe870225f1b3f79492eeb264ab"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4b8b57ed8823c669f6b7807e9b836b7f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8cpp.html#a4b8b57ed8823c669f6b7807e9b836b7f">readFile</a> (std::string <a class="el" href="main_8cpp.html#ac81f9269c8d57eed4d5b56f054fc84de">fileName</a>)</td></tr>
+<tr class="memdesc:a4b8b57ed8823c669f6b7807e9b836b7f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reads the dataset from a file and computes the minimum, maximum, mean, and standard deviation.  <a href="#a4b8b57ed8823c669f6b7807e9b836b7f">More...</a><br /></td></tr>
+<tr class="separator:a4b8b57ed8823c669f6b7807e9b836b7f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aef7ba2f69afb2d954545f64c7fe24b14"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8cpp.html#aef7ba2f69afb2d954545f64c7fe24b14">keyboard</a> (unsigned char key, int x, int y)</td></tr>
+<tr class="memdesc:aef7ba2f69afb2d954545f64c7fe24b14"><td class="mdescLeft">&#160;</td><td class="mdescRight">Keyboard callback function to handle standard key presses.  <a href="#aef7ba2f69afb2d954545f64c7fe24b14">More...</a><br /></td></tr>
 <tr class="separator:aef7ba2f69afb2d954545f64c7fe24b14"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a98ec2c327bb359692043e43a6805f486"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8cpp.html#a98ec2c327bb359692043e43a6805f486">specialKey</a> (int key, int x, int y)</td></tr>
+<tr class="memdesc:a98ec2c327bb359692043e43a6805f486"><td class="mdescLeft">&#160;</td><td class="mdescRight">Special keyboard callback function to handle special key presses (e.g., arrow keys).  <a href="#a98ec2c327bb359692043e43a6805f486">More...</a><br /></td></tr>
 <tr class="separator:a98ec2c327bb359692043e43a6805f486"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7a3bcf29c9207c9e1d8b5c5038528334"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8cpp.html#a7a3bcf29c9207c9e1d8b5c5038528334">topMenuFunc</a> (int id)</td></tr>
+<tr class="memdesc:a7a3bcf29c9207c9e1d8b5c5038528334"><td class="mdescLeft">&#160;</td><td class="mdescRight">Callback function for the top-level menu.  <a href="#a7a3bcf29c9207c9e1d8b5c5038528334">More...</a><br /></td></tr>
 <tr class="separator:a7a3bcf29c9207c9e1d8b5c5038528334"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afff305262d54ff700b916f1d64fb77e3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8cpp.html#afff305262d54ff700b916f1d64fb77e3">fileMenuFunction</a> (int id)</td></tr>
+<tr class="memdesc:afff305262d54ff700b916f1d64fb77e3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Callback function for the file menu.  <a href="#afff305262d54ff700b916f1d64fb77e3">More...</a><br /></td></tr>
 <tr class="separator:afff305262d54ff700b916f1d64fb77e3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af0700a7721e27d43f34b63681ea65cd5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8cpp.html#af0700a7721e27d43f34b63681ea65cd5">funcMenuFunction</a> (int id)</td></tr>
+<tr class="memdesc:af0700a7721e27d43f34b63681ea65cd5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Callback function for the distribution menu.  <a href="#af0700a7721e27d43f34b63681ea65cd5">More...</a><br /></td></tr>
 <tr class="separator:af0700a7721e27d43f34b63681ea65cd5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afc0f28ef3902281e286021b87b6c526e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8cpp.html#afc0f28ef3902281e286021b87b6c526e">histogramMenuFunction</a> (int id)</td></tr>
+<tr class="memdesc:afc0f28ef3902281e286021b87b6c526e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Callback function for the histogram menu.  <a href="#afc0f28ef3902281e286021b87b6c526e">More...</a><br /></td></tr>
 <tr class="separator:afc0f28ef3902281e286021b87b6c526e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a152813776642300c309cea4b5e1617d0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8cpp.html#a152813776642300c309cea4b5e1617d0">parameterStepMenuFunction</a> (int id)</td></tr>
+<tr class="memdesc:a152813776642300c309cea4b5e1617d0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Callback function for the parameter step menu.  <a href="#a152813776642300c309cea4b5e1617d0">More...</a><br /></td></tr>
 <tr class="separator:a152813776642300c309cea4b5e1617d0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a84e8aba32191c603553509d5248ee4b5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8cpp.html#a84e8aba32191c603553509d5248ee4b5">createMenu</a> ()</td></tr>
+<tr class="memdesc:a84e8aba32191c603553509d5248ee4b5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates the right-click context menu for the application.  <a href="#a84e8aba32191c603553509d5248ee4b5">More...</a><br /></td></tr>
 <tr class="separator:a84e8aba32191c603553509d5248ee4b5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acc1ffe65e6869931318610cae7210078"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8cpp.html#acc1ffe65e6869931318610cae7210078">reshape</a> (int w, int h)</td></tr>
+<tr class="memdesc:acc1ffe65e6869931318610cae7210078"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reshape callback function to handle window resizing.  <a href="#acc1ffe65e6869931318610cae7210078">More...</a><br /></td></tr>
 <tr class="separator:acc1ffe65e6869931318610cae7210078"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3c04138a5bfe5d72780bb7e82a18e627"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8cpp.html#a3c04138a5bfe5d72780bb7e82a18e627">main</a> (int argc, char **argv)</td></tr>
+<tr class="memdesc:a3c04138a5bfe5d72780bb7e82a18e627"><td class="mdescLeft">&#160;</td><td class="mdescRight">The main function initializes the program and enters the GLUT main loop.  <a href="#a3c04138a5bfe5d72780bb7e82a18e627">More...</a><br /></td></tr>
 <tr class="separator:a3c04138a5bfe5d72780bb7e82a18e627"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
 Variables</h2></td></tr>
-<tr class="memitem:a1919d37919306ece48344c9b78f2f49c"><td class="memItemLeft" align="right" valign="top">char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8cpp.html#a1919d37919306ece48344c9b78f2f49c">fileName1</a></td></tr>
-<tr class="separator:a1919d37919306ece48344c9b78f2f49c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5907c9b35ea0c7552349afe8ffca918f"><td class="memItemLeft" align="right" valign="top">char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8cpp.html#a5907c9b35ea0c7552349afe8ffca918f">fileName2</a></td></tr>
-<tr class="separator:a5907c9b35ea0c7552349afe8ffca918f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a75a030c1ac7bfa856d51cf4bfaedecb6"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8cpp.html#a75a030c1ac7bfa856d51cf4bfaedecb6">currentFile</a></td></tr>
-<tr class="separator:a75a030c1ac7bfa856d51cf4bfaedecb6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a49792ffe97500310c4dbf057109feb9f"><td class="memItemLeft" align="right" valign="top">float *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8cpp.html#a49792ffe97500310c4dbf057109feb9f">dataset</a></td></tr>
+<tr class="memitem:aa770d80493fae04dd6a59446cceb8e75"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8cpp.html#aa770d80493fae04dd6a59446cceb8e75">filePath</a> = &quot;Data/&quot;</td></tr>
+<tr class="memdesc:aa770d80493fae04dd6a59446cceb8e75"><td class="mdescLeft">&#160;</td><td class="mdescRight">Path to the data directory.  <a href="#aa770d80493fae04dd6a59446cceb8e75">More...</a><br /></td></tr>
+<tr class="separator:aa770d80493fae04dd6a59446cceb8e75"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac81f9269c8d57eed4d5b56f054fc84de"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8cpp.html#ac81f9269c8d57eed4d5b56f054fc84de">fileName</a> = &quot;5.dat&quot;</td></tr>
+<tr class="memdesc:ac81f9269c8d57eed4d5b56f054fc84de"><td class="mdescLeft">&#160;</td><td class="mdescRight">Name of the data file to read.  <a href="#ac81f9269c8d57eed4d5b56f054fc84de">More...</a><br /></td></tr>
+<tr class="separator:ac81f9269c8d57eed4d5b56f054fc84de"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a49792ffe97500310c4dbf057109feb9f"><td class="memItemLeft" align="right" valign="top">float *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8cpp.html#a49792ffe97500310c4dbf057109feb9f">dataset</a> = nullptr</td></tr>
+<tr class="memdesc:a49792ffe97500310c4dbf057109feb9f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pointer to the dataset array.  <a href="#a49792ffe97500310c4dbf057109feb9f">More...</a><br /></td></tr>
 <tr class="separator:a49792ffe97500310c4dbf057109feb9f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4b619ee914b6d9d8490509e1db377731"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8cpp.html#a4b619ee914b6d9d8490509e1db377731">numDataPoints</a></td></tr>
+<tr class="memdesc:a4b619ee914b6d9d8490509e1db377731"><td class="mdescLeft">&#160;</td><td class="mdescRight">Number of data points in the dataset.  <a href="#a4b619ee914b6d9d8490509e1db377731">More...</a><br /></td></tr>
 <tr class="separator:a4b619ee914b6d9d8490509e1db377731"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1fac701369b1197497f7c698ad74386d"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8cpp.html#a1fac701369b1197497f7c698ad74386d">minimum</a></td></tr>
+<tr class="memdesc:a1fac701369b1197497f7c698ad74386d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Minimum value in the dataset.  <a href="#a1fac701369b1197497f7c698ad74386d">More...</a><br /></td></tr>
 <tr class="separator:a1fac701369b1197497f7c698ad74386d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a466d4dab1bd38a43438c2e5e6ad5534e"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8cpp.html#a466d4dab1bd38a43438c2e5e6ad5534e">maximum</a></td></tr>
+<tr class="memdesc:a466d4dab1bd38a43438c2e5e6ad5534e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Maximum value in the dataset.  <a href="#a466d4dab1bd38a43438c2e5e6ad5534e">More...</a><br /></td></tr>
 <tr class="separator:a466d4dab1bd38a43438c2e5e6ad5534e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af5940e5a8d7b14482b65dab997f77f5a"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8cpp.html#af5940e5a8d7b14482b65dab997f77f5a">numIntervals</a> = 30</td></tr>
+<tr class="memdesc:af5940e5a8d7b14482b65dab997f77f5a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Number of intervals (bins) in the histogram.  <a href="#af5940e5a8d7b14482b65dab997f77f5a">More...</a><br /></td></tr>
 <tr class="separator:af5940e5a8d7b14482b65dab997f77f5a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5829d8d7b5d5c2cc30d3b7971bcdfafb"><td class="memItemLeft" align="right" valign="top">float *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8cpp.html#a5829d8d7b5d5c2cc30d3b7971bcdfafb">endPoints</a></td></tr>
+<tr class="memitem:a5829d8d7b5d5c2cc30d3b7971bcdfafb"><td class="memItemLeft" align="right" valign="top">float *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8cpp.html#a5829d8d7b5d5c2cc30d3b7971bcdfafb">endPoints</a> = nullptr</td></tr>
+<tr class="memdesc:a5829d8d7b5d5c2cc30d3b7971bcdfafb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Endpoints of the histogram intervals.  <a href="#a5829d8d7b5d5c2cc30d3b7971bcdfafb">More...</a><br /></td></tr>
 <tr class="separator:a5829d8d7b5d5c2cc30d3b7971bcdfafb"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6a90ae33df734ef69a88ff3e98e51ba8"><td class="memItemLeft" align="right" valign="top">float *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8cpp.html#a6a90ae33df734ef69a88ff3e98e51ba8">prob</a></td></tr>
+<tr class="memitem:a6a90ae33df734ef69a88ff3e98e51ba8"><td class="memItemLeft" align="right" valign="top">float *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8cpp.html#a6a90ae33df734ef69a88ff3e98e51ba8">prob</a> = nullptr</td></tr>
+<tr class="memdesc:a6a90ae33df734ef69a88ff3e98e51ba8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Probabilities for each histogram interval.  <a href="#a6a90ae33df734ef69a88ff3e98e51ba8">More...</a><br /></td></tr>
 <tr class="separator:a6a90ae33df734ef69a88ff3e98e51ba8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4009ccffbcbaa71f27a100996637ef55"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8cpp.html#a4009ccffbcbaa71f27a100996637ef55">maxProb</a> = -1</td></tr>
+<tr class="memdesc:a4009ccffbcbaa71f27a100996637ef55"><td class="mdescLeft">&#160;</td><td class="mdescRight">Maximum probability value in the histogram.  <a href="#a4009ccffbcbaa71f27a100996637ef55">More...</a><br /></td></tr>
 <tr class="separator:a4009ccffbcbaa71f27a100996637ef55"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9d78f7a1a6619e61e8052c82da2b8a45"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8cpp.html#a9d78f7a1a6619e61e8052c82da2b8a45">curveType</a> = 0</td></tr>
+<tr class="memdesc:a9d78f7a1a6619e61e8052c82da2b8a45"><td class="mdescLeft">&#160;</td><td class="mdescRight">Type of the theoretical distribution curve (0 for normal, 1 for exponential).  <a href="#a9d78f7a1a6619e61e8052c82da2b8a45">More...</a><br /></td></tr>
 <tr class="separator:a9d78f7a1a6619e61e8052c82da2b8a45"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0f3f27cb8d5144d445ed195ee6dd4f50"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8cpp.html#a0f3f27cb8d5144d445ed195ee6dd4f50">numCurvePoints</a> = 100</td></tr>
+<tr class="memdesc:a0f3f27cb8d5144d445ed195ee6dd4f50"><td class="mdescLeft">&#160;</td><td class="mdescRight">Number of points to compute in the theoretical curve.  <a href="#a0f3f27cb8d5144d445ed195ee6dd4f50">More...</a><br /></td></tr>
 <tr class="separator:a0f3f27cb8d5144d445ed195ee6dd4f50"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7316cbf51a3967309f75b54b04d07c6e"><td class="memItemLeft" align="right" valign="top">float *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8cpp.html#a7316cbf51a3967309f75b54b04d07c6e">curveX</a> = new float[<a class="el" href="main_8cpp.html#a0f3f27cb8d5144d445ed195ee6dd4f50">numCurvePoints</a>]</td></tr>
+<tr class="memdesc:a7316cbf51a3967309f75b54b04d07c6e"><td class="mdescLeft">&#160;</td><td class="mdescRight">X-values of the theoretical curve.  <a href="#a7316cbf51a3967309f75b54b04d07c6e">More...</a><br /></td></tr>
 <tr class="separator:a7316cbf51a3967309f75b54b04d07c6e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6c8f4e237e8e6bd9ecdde3919b0a4fba"><td class="memItemLeft" align="right" valign="top">float *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8cpp.html#a6c8f4e237e8e6bd9ecdde3919b0a4fba">curveY</a> = new float[<a class="el" href="main_8cpp.html#a0f3f27cb8d5144d445ed195ee6dd4f50">numCurvePoints</a>]</td></tr>
+<tr class="memdesc:a6c8f4e237e8e6bd9ecdde3919b0a4fba"><td class="mdescLeft">&#160;</td><td class="mdescRight">Y-values of the theoretical curve.  <a href="#a6c8f4e237e8e6bd9ecdde3919b0a4fba">More...</a><br /></td></tr>
 <tr class="separator:a6c8f4e237e8e6bd9ecdde3919b0a4fba"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afa6830ed873b30748f4ddde9b39554f5"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8cpp.html#afa6830ed873b30748f4ddde9b39554f5">maxCurveY</a> = -1</td></tr>
+<tr class="memdesc:afa6830ed873b30748f4ddde9b39554f5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Maximum Y-value in the theoretical curve.  <a href="#afa6830ed873b30748f4ddde9b39554f5">More...</a><br /></td></tr>
+<tr class="separator:afa6830ed873b30748f4ddde9b39554f5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4df8d1d064e0269c44c34fd4a7a3b705"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8cpp.html#a4df8d1d064e0269c44c34fd4a7a3b705">mu</a> = 0</td></tr>
+<tr class="memdesc:a4df8d1d064e0269c44c34fd4a7a3b705"><td class="mdescLeft">&#160;</td><td class="mdescRight">Mean (mu) parameter for the normal distribution.  <a href="#a4df8d1d064e0269c44c34fd4a7a3b705">More...</a><br /></td></tr>
 <tr class="separator:a4df8d1d064e0269c44c34fd4a7a3b705"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae11aeeb83e22b5b7f1e6b4347eb1daa6"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8cpp.html#ae11aeeb83e22b5b7f1e6b4347eb1daa6">sigma</a> = 1</td></tr>
+<tr class="memdesc:ae11aeeb83e22b5b7f1e6b4347eb1daa6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Standard deviation (sigma) parameter for the normal distribution.  <a href="#ae11aeeb83e22b5b7f1e6b4347eb1daa6">More...</a><br /></td></tr>
 <tr class="separator:ae11aeeb83e22b5b7f1e6b4347eb1daa6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab53db8e89ce5e334bfc0b19b65e9cc85"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8cpp.html#ab53db8e89ce5e334bfc0b19b65e9cc85">lamda</a> = 1</td></tr>
-<tr class="separator:ab53db8e89ce5e334bfc0b19b65e9cc85"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acac4a565486bad0b88b62387d8a5d891"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8cpp.html#acac4a565486bad0b88b62387d8a5d891">lambda</a> = 1</td></tr>
+<tr class="memdesc:acac4a565486bad0b88b62387d8a5d891"><td class="mdescLeft">&#160;</td><td class="mdescRight">Lambda parameter for the exponential distribution.  <a href="#acac4a565486bad0b88b62387d8a5d891">More...</a><br /></td></tr>
+<tr class="separator:acac4a565486bad0b88b62387d8a5d891"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a58473e61d489ab3f35a0b6f2499f5672"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8cpp.html#a58473e61d489ab3f35a0b6f2499f5672">parameterStep</a> = 0.05</td></tr>
+<tr class="memdesc:a58473e61d489ab3f35a0b6f2499f5672"><td class="mdescLeft">&#160;</td><td class="mdescRight">Step size for changing parameter values.  <a href="#a58473e61d489ab3f35a0b6f2499f5672">More...</a><br /></td></tr>
 <tr class="separator:a58473e61d489ab3f35a0b6f2499f5672"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2474a5474cbff19523a51eb1de01cda4"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8cpp.html#a2474a5474cbff19523a51eb1de01cda4">width</a> = 800</td></tr>
+<tr class="memdesc:a2474a5474cbff19523a51eb1de01cda4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Window width.  <a href="#a2474a5474cbff19523a51eb1de01cda4">More...</a><br /></td></tr>
 <tr class="separator:a2474a5474cbff19523a51eb1de01cda4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad12fc34ce789bce6c8a05d8a17138534"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8cpp.html#ad12fc34ce789bce6c8a05d8a17138534">height</a> = 600</td></tr>
+<tr class="memitem:ad12fc34ce789bce6c8a05d8a17138534"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8cpp.html#ad12fc34ce789bce6c8a05d8a17138534">height</a> = 800</td></tr>
+<tr class="memdesc:ad12fc34ce789bce6c8a05d8a17138534"><td class="mdescLeft">&#160;</td><td class="mdescRight">Window height.  <a href="#ad12fc34ce789bce6c8a05d8a17138534">More...</a><br /></td></tr>
 <tr class="separator:ad12fc34ce789bce6c8a05d8a17138534"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a37fc98a738cb4c75119f17c232ff8fd7"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8cpp.html#a37fc98a738cb4c75119f17c232ff8fd7">world_x_min</a></td></tr>
-<tr class="separator:a37fc98a738cb4c75119f17c232ff8fd7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7510815f15b91f88cbb0a144aba5b211"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8cpp.html#a7510815f15b91f88cbb0a144aba5b211">world_x_max</a></td></tr>
-<tr class="separator:a7510815f15b91f88cbb0a144aba5b211"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae6095ca0f3d6d9dde4b43db1d18b07bd"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8cpp.html#ae6095ca0f3d6d9dde4b43db1d18b07bd">world_y_min</a></td></tr>
-<tr class="separator:ae6095ca0f3d6d9dde4b43db1d18b07bd"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa4969703718a8d963578239158c3c78e"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8cpp.html#aa4969703718a8d963578239158c3c78e">world_y_max</a></td></tr>
-<tr class="separator:aa4969703718a8d963578239158c3c78e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0038246c6d0800579870ad21d2cb5de8"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8cpp.html#a0038246c6d0800579870ad21d2cb5de8">axis_x_min</a></td></tr>
-<tr class="separator:a0038246c6d0800579870ad21d2cb5de8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa8507650e5b0fe8283f3eb183a4e34ae"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8cpp.html#aa8507650e5b0fe8283f3eb183a4e34ae">axis_x_max</a></td></tr>
-<tr class="separator:aa8507650e5b0fe8283f3eb183a4e34ae"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae0dc3edddb8ab6ae2639c34fb08dd5bd"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8cpp.html#ae0dc3edddb8ab6ae2639c34fb08dd5bd">axis_y_min</a></td></tr>
-<tr class="separator:ae0dc3edddb8ab6ae2639c34fb08dd5bd"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a41189b0acd14072d54b62eee107c77f0"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8cpp.html#a41189b0acd14072d54b62eee107c77f0">axis_y_max</a></td></tr>
-<tr class="separator:a41189b0acd14072d54b62eee107c77f0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<h2 class="groupheader">Macro Definition Documentation</h2>
+<a id="a525335710b53cb064ca56b936120431e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a525335710b53cb064ca56b936120431e">&#9670;&nbsp;</a></span>_USE_MATH_DEFINES</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define _USE_MATH_DEFINES</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <h2 class="groupheader">Function Documentation</h2>
-<a id="ae673a5db5ae9b0c651b452316de53071"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae673a5db5ae9b0c651b452316de53071">&#9670;&nbsp;</a></span>computeExponentialFunc()</h2>
+<a id="ad061a8419a9975970ffc0991b9891e5f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad061a8419a9975970ffc0991b9891e5f">&#9670;&nbsp;</a></span>computeExponentialFunc()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -172,11 +222,79 @@ Variables</h2></td></tr>
           <td class="memname">void computeExponentialFunc </td>
           <td>(</td>
           <td class="paramtype">float&#160;</td>
-          <td class="paramname"><em>lamda</em></td><td>)</td>
+          <td class="paramname"><em>lambda</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Computes the points for the exponential distribution curve. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">lambda</td><td>The lambda parameter of the exponential distribution. </td></tr>
+  </table>
+  </dd>
+</dl>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="main_8cpp_ad061a8419a9975970ffc0991b9891e5f_icgraph.png" border="0" usemap="#main_8cpp_ad061a8419a9975970ffc0991b9891e5f_icgraph" alt=""/></div>
+<map name="main_8cpp_ad061a8419a9975970ffc0991b9891e5f_icgraph" id="main_8cpp_ad061a8419a9975970ffc0991b9891e5f_icgraph">
+<area shape="rect" id="node2" href="main_8cpp.html#afff305262d54ff700b916f1d64fb77e3" title="Callback function for the file menu. " alt="" coords="227,5,347,32"/>
+<area shape="rect" id="node4" href="main_8cpp.html#a3c04138a5bfe5d72780bb7e82a18e627" title="The main function initializes the program and enters the GLUT main loop. " alt="" coords="537,81,588,108"/>
+<area shape="rect" id="node5" href="main_8cpp.html#af0700a7721e27d43f34b63681ea65cd5" title="Callback function for the distribution menu. " alt="" coords="223,56,351,83"/>
+<area shape="rect" id="node3" href="main_8cpp.html#a84e8aba32191c603553509d5248ee4b5" title="Creates the right&#45;click context menu for the application. " alt="" coords="399,56,489,83"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a2a6db4d94910ad759d5ae53b11f7daef"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2a6db4d94910ad759d5ae53b11f7daef">&#9670;&nbsp;</a></span>computeMean()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float computeMean </td>
+          <td>(</td>
+          <td class="paramtype">float *&#160;</td>
+          <td class="paramname"><em>data</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>size</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Computes the mean (average) of the given data array. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">data</td><td>Pointer to the data array. </td></tr>
+    <tr><td class="paramname">size</td><td>Number of elements in the data array. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The computed mean value. </dd></dl>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="main_8cpp_a2a6db4d94910ad759d5ae53b11f7daef_icgraph.png" border="0" usemap="#main_8cpp_a2a6db4d94910ad759d5ae53b11f7daef_icgraph" alt=""/></div>
+<map name="main_8cpp_a2a6db4d94910ad759d5ae53b11f7daef_icgraph" id="main_8cpp_a2a6db4d94910ad759d5ae53b11f7daef_icgraph">
+<area shape="rect" id="node2" href="main_8cpp.html#a4b8b57ed8823c669f6b7807e9b836b7f" title="Reads the dataset from a file and computes the minimum, maximum, mean, and standard deviation..." alt="" coords="157,31,225,57"/>
+<area shape="rect" id="node3" href="main_8cpp.html#afff305262d54ff700b916f1d64fb77e3" title="Callback function for the file menu. " alt="" coords="273,5,393,32"/>
+<area shape="rect" id="node5" href="main_8cpp.html#a3c04138a5bfe5d72780bb7e82a18e627" title="The main function initializes the program and enters the GLUT main loop. " alt="" coords="580,31,631,57"/>
+<area shape="rect" id="node4" href="main_8cpp.html#a84e8aba32191c603553509d5248ee4b5" title="Creates the right&#45;click context menu for the application. " alt="" coords="441,5,532,32"/>
+</map>
+</div>
 
 </div>
 </div>
@@ -206,6 +324,27 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Computes the points for the normal distribution curve. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">mu</td><td>The mean value of the normal distribution. </td></tr>
+    <tr><td class="paramname">sigma</td><td>The standard deviation of the normal distribution. </td></tr>
+  </table>
+  </dd>
+</dl>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="main_8cpp_a61e906382bb4ca6502934aac20f7e362_icgraph.png" border="0" usemap="#main_8cpp_a61e906382bb4ca6502934aac20f7e362_icgraph" alt=""/></div>
+<map name="main_8cpp_a61e906382bb4ca6502934aac20f7e362_icgraph" id="main_8cpp_a61e906382bb4ca6502934aac20f7e362_icgraph">
+<area shape="rect" id="node2" href="main_8cpp.html#a98ec2c327bb359692043e43a6805f486" title="Special keyboard callback function to handle special key presses (e.g., arrow keys). " alt="" coords="374,5,461,32"/>
+<area shape="rect" id="node3" href="main_8cpp.html#a3c04138a5bfe5d72780bb7e82a18e627" title="The main function initializes the program and enters the GLUT main loop. " alt="" coords="511,56,561,83"/>
+<area shape="rect" id="node4" href="main_8cpp.html#afff305262d54ff700b916f1d64fb77e3" title="Callback function for the file menu. " alt="" coords="200,107,320,133"/>
+<area shape="rect" id="node6" href="main_8cpp.html#af0700a7721e27d43f34b63681ea65cd5" title="Callback function for the distribution menu. " alt="" coords="196,157,324,184"/>
+<area shape="rect" id="node5" href="main_8cpp.html#a84e8aba32191c603553509d5248ee4b5" title="Creates the right&#45;click context menu for the application. " alt="" coords="372,107,463,133"/>
+</map>
+</div>
+
 </div>
 </div>
 <a id="a0931fb7723884495fa0f9cc9abb06fcd"></a>
@@ -224,6 +363,82 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Computes the probabilities for the histogram based on the dataset and number of intervals. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">numIntervals</td><td>The number of intervals (bins) in the histogram. </td></tr>
+  </table>
+  </dd>
+</dl>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="main_8cpp_a0931fb7723884495fa0f9cc9abb06fcd_icgraph.png" border="0" usemap="#main_8cpp_a0931fb7723884495fa0f9cc9abb06fcd_icgraph" alt=""/></div>
+<map name="main_8cpp_a0931fb7723884495fa0f9cc9abb06fcd_icgraph" id="main_8cpp_a0931fb7723884495fa0f9cc9abb06fcd_icgraph">
+<area shape="rect" id="node2" href="main_8cpp.html#aef7ba2f69afb2d954545f64c7fe24b14" title="Keyboard callback function to handle standard key presses. " alt="" coords="404,5,479,32"/>
+<area shape="rect" id="node3" href="main_8cpp.html#a3c04138a5bfe5d72780bb7e82a18e627" title="The main function initializes the program and enters the GLUT main loop. " alt="" coords="535,56,585,83"/>
+<area shape="rect" id="node4" href="main_8cpp.html#afff305262d54ff700b916f1d64fb77e3" title="Callback function for the file menu. " alt="" coords="207,107,327,133"/>
+<area shape="rect" id="node6" href="main_8cpp.html#afc0f28ef3902281e286021b87b6c526e" title="Callback function for the histogram menu. " alt="" coords="187,157,348,184"/>
+<area shape="rect" id="node5" href="main_8cpp.html#a84e8aba32191c603553509d5248ee4b5" title="Creates the right&#45;click context menu for the application. " alt="" coords="396,107,487,133"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a556823fe870225f1b3f79492eeb264ab"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a556823fe870225f1b3f79492eeb264ab">&#9670;&nbsp;</a></span>computeStandardDeviation()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float computeStandardDeviation </td>
+          <td>(</td>
+          <td class="paramtype">float *&#160;</td>
+          <td class="paramname"><em>data</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>size</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>mean</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Computes the standard deviation of the given data array. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">data</td><td>Pointer to the data array. </td></tr>
+    <tr><td class="paramname">size</td><td>Number of elements in the data array. </td></tr>
+    <tr><td class="paramname">mean</td><td>The mean value of the data array. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The computed standard deviation. </dd></dl>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="main_8cpp_a556823fe870225f1b3f79492eeb264ab_icgraph.png" border="0" usemap="#main_8cpp_a556823fe870225f1b3f79492eeb264ab_icgraph" alt=""/></div>
+<map name="main_8cpp_a556823fe870225f1b3f79492eeb264ab_icgraph" id="main_8cpp_a556823fe870225f1b3f79492eeb264ab_icgraph">
+<area shape="rect" id="node2" href="main_8cpp.html#a4b8b57ed8823c669f6b7807e9b836b7f" title="Reads the dataset from a file and computes the minimum, maximum, mean, and standard deviation..." alt="" coords="229,31,297,57"/>
+<area shape="rect" id="node3" href="main_8cpp.html#afff305262d54ff700b916f1d64fb77e3" title="Callback function for the file menu. " alt="" coords="345,5,465,32"/>
+<area shape="rect" id="node5" href="main_8cpp.html#a3c04138a5bfe5d72780bb7e82a18e627" title="The main function initializes the program and enters the GLUT main loop. " alt="" coords="652,31,703,57"/>
+<area shape="rect" id="node4" href="main_8cpp.html#a84e8aba32191c603553509d5248ee4b5" title="Creates the right&#45;click context menu for the application. " alt="" coords="513,5,604,32"/>
+</map>
+</div>
+
 </div>
 </div>
 <a id="a84e8aba32191c603553509d5248ee4b5"></a>
@@ -240,6 +455,34 @@ Variables</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Creates the right-click context menu for the application. </p>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="main_8cpp_a84e8aba32191c603553509d5248ee4b5_cgraph.png" border="0" usemap="#main_8cpp_a84e8aba32191c603553509d5248ee4b5_cgraph" alt=""/></div>
+<map name="main_8cpp_a84e8aba32191c603553509d5248ee4b5_cgraph" id="main_8cpp_a84e8aba32191c603553509d5248ee4b5_cgraph">
+<area shape="rect" id="node2" href="main_8cpp.html#afff305262d54ff700b916f1d64fb77e3" title="Callback function for the file menu. " alt="" coords="179,56,299,83"/>
+<area shape="rect" id="node9" href="main_8cpp.html#af0700a7721e27d43f34b63681ea65cd5" title="Callback function for the distribution menu. " alt="" coords="175,107,303,133"/>
+<area shape="rect" id="node10" href="main_8cpp.html#afc0f28ef3902281e286021b87b6c526e" title="Callback function for the histogram menu. " alt="" coords="158,5,319,32"/>
+<area shape="rect" id="node11" href="main_8cpp.html#a152813776642300c309cea4b5e1617d0" title="Callback function for the parameter step menu. " alt="" coords="144,157,333,184"/>
+<area shape="rect" id="node12" href="main_8cpp.html#a7a3bcf29c9207c9e1d8b5c5038528334" title="Callback function for the top&#45;level menu. " alt="" coords="188,208,289,235"/>
+<area shape="rect" id="node3" href="main_8cpp.html#a4b8b57ed8823c669f6b7807e9b836b7f" title="Reads the dataset from a file and computes the minimum, maximum, mean, and standard deviation..." alt="" coords="432,56,500,83"/>
+<area shape="rect" id="node6" href="main_8cpp.html#a0931fb7723884495fa0f9cc9abb06fcd" title="Computes the probabilities for the histogram based on the dataset and number of intervals. " alt="" coords="399,5,533,32"/>
+<area shape="rect" id="node7" href="main_8cpp.html#a61e906382bb4ca6502934aac20f7e362" title="Computes the points for the normal distribution curve. " alt="" coords="395,107,537,133"/>
+<area shape="rect" id="node8" href="main_8cpp.html#ad061a8419a9975970ffc0991b9891e5f" title="Computes the points for the exponential distribution curve. " alt="" coords="381,157,551,184"/>
+<area shape="rect" id="node4" href="main_8cpp.html#a2a6db4d94910ad759d5ae53b11f7daef" title="Computes the mean (average) of the given data array. " alt="" coords="635,31,739,57"/>
+<area shape="rect" id="node5" href="main_8cpp.html#a556823fe870225f1b3f79492eeb264ab" title="Computes the standard deviation of the given data array. " alt="" coords="599,81,775,108"/>
+</map>
+</div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="main_8cpp_a84e8aba32191c603553509d5248ee4b5_icgraph.png" border="0" usemap="#main_8cpp_a84e8aba32191c603553509d5248ee4b5_icgraph" alt=""/></div>
+<map name="main_8cpp_a84e8aba32191c603553509d5248ee4b5_icgraph" id="main_8cpp_a84e8aba32191c603553509d5248ee4b5_icgraph">
+<area shape="rect" id="node2" href="main_8cpp.html#a3c04138a5bfe5d72780bb7e82a18e627" title="The main function initializes the program and enters the GLUT main loop. " alt="" coords="144,5,195,32"/>
+</map>
+</div>
 
 </div>
 </div>
@@ -259,6 +502,24 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Display callback function for rendering the histogram and theoretical distribution. </p>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="main_8cpp_a4ea013001a5fb47853d0fab8f8de35cd_cgraph.png" border="0" usemap="#main_8cpp_a4ea013001a5fb47853d0fab8f8de35cd_cgraph" alt=""/></div>
+<map name="main_8cpp_a4ea013001a5fb47853d0fab8f8de35cd_cgraph" id="main_8cpp_a4ea013001a5fb47853d0fab8f8de35cd_cgraph">
+<area shape="rect" id="node2" href="utility_8cpp.html#a6d76c5087efd87c79ef67d791a152ccb" title="printString" alt="" coords="116,5,197,32"/>
+</map>
+</div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="main_8cpp_a4ea013001a5fb47853d0fab8f8de35cd_icgraph.png" border="0" usemap="#main_8cpp_a4ea013001a5fb47853d0fab8f8de35cd_icgraph" alt=""/></div>
+<map name="main_8cpp_a4ea013001a5fb47853d0fab8f8de35cd_icgraph" id="main_8cpp_a4ea013001a5fb47853d0fab8f8de35cd_icgraph">
+<area shape="rect" id="node2" href="main_8cpp.html#a3c04138a5bfe5d72780bb7e82a18e627" title="The main function initializes the program and enters the GLUT main loop. " alt="" coords="116,5,167,32"/>
+</map>
+</div>
+
 </div>
 </div>
 <a id="afff305262d54ff700b916f1d64fb77e3"></a>
@@ -276,6 +537,36 @@ Variables</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Callback function for the file menu. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">id</td><td>The menu item identifier. </td></tr>
+  </table>
+  </dd>
+</dl>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="main_8cpp_afff305262d54ff700b916f1d64fb77e3_cgraph.png" border="0" usemap="#main_8cpp_afff305262d54ff700b916f1d64fb77e3_cgraph" alt=""/></div>
+<map name="main_8cpp_afff305262d54ff700b916f1d64fb77e3_cgraph" id="main_8cpp_afff305262d54ff700b916f1d64fb77e3_cgraph">
+<area shape="rect" id="node2" href="main_8cpp.html#a4b8b57ed8823c669f6b7807e9b836b7f" title="Reads the dataset from a file and computes the minimum, maximum, mean, and standard deviation..." alt="" coords="224,31,292,57"/>
+<area shape="rect" id="node5" href="main_8cpp.html#a0931fb7723884495fa0f9cc9abb06fcd" title="Computes the probabilities for the histogram based on the dataset and number of intervals. " alt="" coords="191,81,325,108"/>
+<area shape="rect" id="node6" href="main_8cpp.html#a61e906382bb4ca6502934aac20f7e362" title="Computes the points for the normal distribution curve. " alt="" coords="187,132,329,159"/>
+<area shape="rect" id="node7" href="main_8cpp.html#ad061a8419a9975970ffc0991b9891e5f" title="Computes the points for the exponential distribution curve. " alt="" coords="173,183,343,209"/>
+<area shape="rect" id="node3" href="main_8cpp.html#a2a6db4d94910ad759d5ae53b11f7daef" title="Computes the mean (average) of the given data array. " alt="" coords="427,5,531,32"/>
+<area shape="rect" id="node4" href="main_8cpp.html#a556823fe870225f1b3f79492eeb264ab" title="Computes the standard deviation of the given data array. " alt="" coords="391,56,567,83"/>
+</map>
+</div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="main_8cpp_afff305262d54ff700b916f1d64fb77e3_icgraph.png" border="0" usemap="#main_8cpp_afff305262d54ff700b916f1d64fb77e3_icgraph" alt=""/></div>
+<map name="main_8cpp_afff305262d54ff700b916f1d64fb77e3_icgraph" id="main_8cpp_afff305262d54ff700b916f1d64fb77e3_icgraph">
+<area shape="rect" id="node2" href="main_8cpp.html#a84e8aba32191c603553509d5248ee4b5" title="Creates the right&#45;click context menu for the application. " alt="" coords="173,5,264,32"/>
+<area shape="rect" id="node3" href="main_8cpp.html#a3c04138a5bfe5d72780bb7e82a18e627" title="The main function initializes the program and enters the GLUT main loop. " alt="" coords="312,5,363,32"/>
+</map>
+</div>
 
 </div>
 </div>
@@ -295,6 +586,32 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Callback function for the distribution menu. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">id</td><td>The menu item identifier. </td></tr>
+  </table>
+  </dd>
+</dl>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="main_8cpp_af0700a7721e27d43f34b63681ea65cd5_cgraph.png" border="0" usemap="#main_8cpp_af0700a7721e27d43f34b63681ea65cd5_cgraph" alt=""/></div>
+<map name="main_8cpp_af0700a7721e27d43f34b63681ea65cd5_cgraph" id="main_8cpp_af0700a7721e27d43f34b63681ea65cd5_cgraph">
+<area shape="rect" id="node2" href="main_8cpp.html#a61e906382bb4ca6502934aac20f7e362" title="Computes the points for the normal distribution curve. " alt="" coords="195,5,337,32"/>
+<area shape="rect" id="node3" href="main_8cpp.html#ad061a8419a9975970ffc0991b9891e5f" title="Computes the points for the exponential distribution curve. " alt="" coords="181,56,351,83"/>
+</map>
+</div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="main_8cpp_af0700a7721e27d43f34b63681ea65cd5_icgraph.png" border="0" usemap="#main_8cpp_af0700a7721e27d43f34b63681ea65cd5_icgraph" alt=""/></div>
+<map name="main_8cpp_af0700a7721e27d43f34b63681ea65cd5_icgraph" id="main_8cpp_af0700a7721e27d43f34b63681ea65cd5_icgraph">
+<area shape="rect" id="node2" href="main_8cpp.html#a84e8aba32191c603553509d5248ee4b5" title="Creates the right&#45;click context menu for the application. " alt="" coords="181,5,272,32"/>
+<area shape="rect" id="node3" href="main_8cpp.html#a3c04138a5bfe5d72780bb7e82a18e627" title="The main function initializes the program and enters the GLUT main loop. " alt="" coords="320,5,371,32"/>
+</map>
+</div>
+
 </div>
 </div>
 <a id="afc0f28ef3902281e286021b87b6c526e"></a>
@@ -313,6 +630,31 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Callback function for the histogram menu. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">id</td><td>The menu item identifier. </td></tr>
+  </table>
+  </dd>
+</dl>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="main_8cpp_afc0f28ef3902281e286021b87b6c526e_cgraph.png" border="0" usemap="#main_8cpp_afc0f28ef3902281e286021b87b6c526e_cgraph" alt=""/></div>
+<map name="main_8cpp_afc0f28ef3902281e286021b87b6c526e_cgraph" id="main_8cpp_afc0f28ef3902281e286021b87b6c526e_cgraph">
+<area shape="rect" id="node2" href="main_8cpp.html#a0931fb7723884495fa0f9cc9abb06fcd" title="Computes the probabilities for the histogram based on the dataset and number of intervals. " alt="" coords="215,5,348,32"/>
+</map>
+</div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="main_8cpp_afc0f28ef3902281e286021b87b6c526e_icgraph.png" border="0" usemap="#main_8cpp_afc0f28ef3902281e286021b87b6c526e_icgraph" alt=""/></div>
+<map name="main_8cpp_afc0f28ef3902281e286021b87b6c526e_icgraph" id="main_8cpp_afc0f28ef3902281e286021b87b6c526e_icgraph">
+<area shape="rect" id="node2" href="main_8cpp.html#a84e8aba32191c603553509d5248ee4b5" title="Creates the right&#45;click context menu for the application. " alt="" coords="215,5,305,32"/>
+<area shape="rect" id="node3" href="main_8cpp.html#a3c04138a5bfe5d72780bb7e82a18e627" title="The main function initializes the program and enters the GLUT main loop. " alt="" coords="353,5,404,32"/>
+</map>
+</div>
+
 </div>
 </div>
 <a id="a2858154e2009b0e6e616f313177762bc"></a>
@@ -330,6 +672,16 @@ Variables</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Initializes OpenGL settings. </p>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="main_8cpp_a2858154e2009b0e6e616f313177762bc_icgraph.png" border="0" usemap="#main_8cpp_a2858154e2009b0e6e616f313177762bc_icgraph" alt=""/></div>
+<map name="main_8cpp_a2858154e2009b0e6e616f313177762bc_icgraph" id="main_8cpp_a2858154e2009b0e6e616f313177762bc_icgraph">
+<area shape="rect" id="node2" href="main_8cpp.html#a3c04138a5bfe5d72780bb7e82a18e627" title="The main function initializes the program and enters the GLUT main loop. " alt="" coords="92,5,143,32"/>
+</map>
+</div>
 
 </div>
 </div>
@@ -365,6 +717,32 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Keyboard callback function to handle standard key presses. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">key</td><td>The key that was pressed. </td></tr>
+    <tr><td class="paramname">x</td><td>The x-coordinate of the mouse when the key was pressed. </td></tr>
+    <tr><td class="paramname">y</td><td>The y-coordinate of the mouse when the key was pressed. </td></tr>
+  </table>
+  </dd>
+</dl>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="main_8cpp_aef7ba2f69afb2d954545f64c7fe24b14_cgraph.png" border="0" usemap="#main_8cpp_aef7ba2f69afb2d954545f64c7fe24b14_cgraph" alt=""/></div>
+<map name="main_8cpp_aef7ba2f69afb2d954545f64c7fe24b14_cgraph" id="main_8cpp_aef7ba2f69afb2d954545f64c7fe24b14_cgraph">
+<area shape="rect" id="node2" href="main_8cpp.html#a0931fb7723884495fa0f9cc9abb06fcd" title="Computes the probabilities for the histogram based on the dataset and number of intervals. " alt="" coords="128,5,261,32"/>
+</map>
+</div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="main_8cpp_aef7ba2f69afb2d954545f64c7fe24b14_icgraph.png" border="0" usemap="#main_8cpp_aef7ba2f69afb2d954545f64c7fe24b14_icgraph" alt=""/></div>
+<map name="main_8cpp_aef7ba2f69afb2d954545f64c7fe24b14_icgraph" id="main_8cpp_aef7ba2f69afb2d954545f64c7fe24b14_icgraph">
+<area shape="rect" id="node2" href="main_8cpp.html#a3c04138a5bfe5d72780bb7e82a18e627" title="The main function initializes the program and enters the GLUT main loop. " alt="" coords="128,5,179,32"/>
+</map>
+</div>
+
 </div>
 </div>
 <a id="a3c04138a5bfe5d72780bb7e82a18e627"></a>
@@ -393,6 +771,41 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>The main function initializes the program and enters the GLUT main loop. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">argc</td><td>The number of command-line arguments. </td></tr>
+    <tr><td class="paramname">argv</td><td>The array of command-line arguments. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Exit status. </dd></dl>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="main_8cpp_a3c04138a5bfe5d72780bb7e82a18e627_cgraph.png" border="0" usemap="#main_8cpp_a3c04138a5bfe5d72780bb7e82a18e627_cgraph" alt=""/></div>
+<map name="main_8cpp_a3c04138a5bfe5d72780bb7e82a18e627_cgraph" id="main_8cpp_a3c04138a5bfe5d72780bb7e82a18e627_cgraph">
+<area shape="rect" id="node2" href="main_8cpp.html#a4b8b57ed8823c669f6b7807e9b836b7f" title="Reads the dataset from a file and computes the minimum, maximum, mean, and standard deviation..." alt="" coords="531,246,599,272"/>
+<area shape="rect" id="node5" href="main_8cpp.html#a0931fb7723884495fa0f9cc9abb06fcd" title="Computes the probabilities for the histogram based on the dataset and number of intervals. " alt="" coords="498,131,631,158"/>
+<area shape="rect" id="node6" href="main_8cpp.html#a61e906382bb4ca6502934aac20f7e362" title="Computes the points for the normal distribution curve. " alt="" coords="493,486,636,512"/>
+<area shape="rect" id="node7" href="main_8cpp.html#ad061a8419a9975970ffc0991b9891e5f" title="Computes the points for the exponential distribution curve. " alt="" coords="480,410,649,436"/>
+<area shape="rect" id="node8" href="main_8cpp.html#a2858154e2009b0e6e616f313177762bc" title="Initializes OpenGL settings. " alt="" coords="130,232,169,259"/>
+<area shape="rect" id="node9" href="main_8cpp.html#a4ea013001a5fb47853d0fab8f8de35cd" title="Display callback function for rendering the histogram and theoretical distribution. " alt="" coords="118,106,181,132"/>
+<area shape="rect" id="node11" href="main_8cpp.html#acc1ffe65e6869931318610cae7210078" title="Reshape callback function to handle window resizing. " alt="" coords="115,334,183,360"/>
+<area shape="rect" id="node12" href="main_8cpp.html#aef7ba2f69afb2d954545f64c7fe24b14" title="Keyboard callback function to handle standard key presses. " alt="" coords="112,55,187,82"/>
+<area shape="rect" id="node13" href="main_8cpp.html#a98ec2c327bb359692043e43a6805f486" title="Special keyboard callback function to handle special key presses (e.g., arrow keys). " alt="" coords="106,511,193,538"/>
+<area shape="rect" id="node14" href="main_8cpp.html#a84e8aba32191c603553509d5248ee4b5" title="Creates the right&#45;click context menu for the application. " alt="" coords="104,283,195,310"/>
+<area shape="rect" id="node3" href="main_8cpp.html#a2a6db4d94910ad759d5ae53b11f7daef" title="Computes the mean (average) of the given data array. " alt="" coords="733,220,837,247"/>
+<area shape="rect" id="node4" href="main_8cpp.html#a556823fe870225f1b3f79492eeb264ab" title="Computes the standard deviation of the given data array. " alt="" coords="697,271,873,298"/>
+<area shape="rect" id="node10" href="utility_8cpp.html#a6d76c5087efd87c79ef67d791a152ccb" title="printString" alt="" coords="297,106,378,132"/>
+<area shape="rect" id="node15" href="main_8cpp.html#afff305262d54ff700b916f1d64fb77e3" title="Callback function for the file menu. " alt="" coords="277,308,397,335"/>
+<area shape="rect" id="node16" href="main_8cpp.html#af0700a7721e27d43f34b63681ea65cd5" title="Callback function for the distribution menu. " alt="" coords="273,410,401,436"/>
+<area shape="rect" id="node17" href="main_8cpp.html#afc0f28ef3902281e286021b87b6c526e" title="Callback function for the histogram menu. " alt="" coords="257,207,418,234"/>
+<area shape="rect" id="node18" href="main_8cpp.html#a152813776642300c309cea4b5e1617d0" title="Callback function for the parameter step menu. " alt="" coords="243,359,432,386"/>
+<area shape="rect" id="node19" href="main_8cpp.html#a7a3bcf29c9207c9e1d8b5c5038528334" title="Callback function for the top&#45;level menu. " alt="" coords="287,258,388,284"/>
+</map>
+</div>
+
 </div>
 </div>
 <a id="a152813776642300c309cea4b5e1617d0"></a>
@@ -411,10 +824,27 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Callback function for the parameter step menu. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">id</td><td>The menu item identifier. </td></tr>
+  </table>
+  </dd>
+</dl>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="main_8cpp_a152813776642300c309cea4b5e1617d0_icgraph.png" border="0" usemap="#main_8cpp_a152813776642300c309cea4b5e1617d0_icgraph" alt=""/></div>
+<map name="main_8cpp_a152813776642300c309cea4b5e1617d0_icgraph" id="main_8cpp_a152813776642300c309cea4b5e1617d0_icgraph">
+<area shape="rect" id="node2" href="main_8cpp.html#a84e8aba32191c603553509d5248ee4b5" title="Creates the right&#45;click context menu for the application. " alt="" coords="243,5,333,32"/>
+<area shape="rect" id="node3" href="main_8cpp.html#a3c04138a5bfe5d72780bb7e82a18e627" title="The main function initializes the program and enters the GLUT main loop. " alt="" coords="381,5,432,32"/>
+</map>
+</div>
+
 </div>
 </div>
-<a id="a1d2c4747132d1e5f8a236046d2a3442f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1d2c4747132d1e5f8a236046d2a3442f">&#9670;&nbsp;</a></span>readFile()</h2>
+<a id="a4b8b57ed8823c669f6b7807e9b836b7f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4b8b57ed8823c669f6b7807e9b836b7f">&#9670;&nbsp;</a></span>readFile()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -422,12 +852,39 @@ Variables</h2></td></tr>
         <tr>
           <td class="memname">void readFile </td>
           <td>(</td>
-          <td class="paramtype">string&#160;</td>
+          <td class="paramtype">std::string&#160;</td>
           <td class="paramname"><em>fileName</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Reads the dataset from a file and computes the minimum, maximum, mean, and standard deviation. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">fileName</td><td>The name of the file to read. </td></tr>
+  </table>
+  </dd>
+</dl>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="main_8cpp_a4b8b57ed8823c669f6b7807e9b836b7f_cgraph.png" border="0" usemap="#main_8cpp_a4b8b57ed8823c669f6b7807e9b836b7f_cgraph" alt=""/></div>
+<map name="main_8cpp_a4b8b57ed8823c669f6b7807e9b836b7f_cgraph" id="main_8cpp_a4b8b57ed8823c669f6b7807e9b836b7f_cgraph">
+<area shape="rect" id="node2" href="main_8cpp.html#a2a6db4d94910ad759d5ae53b11f7daef" title="Computes the mean (average) of the given data array. " alt="" coords="157,5,261,32"/>
+<area shape="rect" id="node3" href="main_8cpp.html#a556823fe870225f1b3f79492eeb264ab" title="Computes the standard deviation of the given data array. " alt="" coords="121,56,297,83"/>
+</map>
+</div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="main_8cpp_a4b8b57ed8823c669f6b7807e9b836b7f_icgraph.png" border="0" usemap="#main_8cpp_a4b8b57ed8823c669f6b7807e9b836b7f_icgraph" alt=""/></div>
+<map name="main_8cpp_a4b8b57ed8823c669f6b7807e9b836b7f_icgraph" id="main_8cpp_a4b8b57ed8823c669f6b7807e9b836b7f_icgraph">
+<area shape="rect" id="node2" href="main_8cpp.html#afff305262d54ff700b916f1d64fb77e3" title="Callback function for the file menu. " alt="" coords="121,5,241,32"/>
+<area shape="rect" id="node4" href="main_8cpp.html#a3c04138a5bfe5d72780bb7e82a18e627" title="The main function initializes the program and enters the GLUT main loop. " alt="" coords="428,31,479,57"/>
+<area shape="rect" id="node3" href="main_8cpp.html#a84e8aba32191c603553509d5248ee4b5" title="Creates the right&#45;click context menu for the application. " alt="" coords="289,5,380,32"/>
+</map>
+</div>
 
 </div>
 </div>
@@ -456,6 +913,23 @@ Variables</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Reshape callback function to handle window resizing. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">w</td><td>The new width of the window. </td></tr>
+    <tr><td class="paramname">h</td><td>The new height of the window. </td></tr>
+  </table>
+  </dd>
+</dl>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="main_8cpp_acc1ffe65e6869931318610cae7210078_icgraph.png" border="0" usemap="#main_8cpp_acc1ffe65e6869931318610cae7210078_icgraph" alt=""/></div>
+<map name="main_8cpp_acc1ffe65e6869931318610cae7210078_icgraph" id="main_8cpp_acc1ffe65e6869931318610cae7210078_icgraph">
+<area shape="rect" id="node2" href="main_8cpp.html#a3c04138a5bfe5d72780bb7e82a18e627" title="The main function initializes the program and enters the GLUT main loop. " alt="" coords="121,5,172,32"/>
+</map>
+</div>
 
 </div>
 </div>
@@ -491,6 +965,32 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Special keyboard callback function to handle special key presses (e.g., arrow keys). </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">key</td><td>The special key that was pressed. </td></tr>
+    <tr><td class="paramname">x</td><td>The x-coordinate of the mouse when the key was pressed. </td></tr>
+    <tr><td class="paramname">y</td><td>The y-coordinate of the mouse when the key was pressed. </td></tr>
+  </table>
+  </dd>
+</dl>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="main_8cpp_a98ec2c327bb359692043e43a6805f486_cgraph.png" border="0" usemap="#main_8cpp_a98ec2c327bb359692043e43a6805f486_cgraph" alt=""/></div>
+<map name="main_8cpp_a98ec2c327bb359692043e43a6805f486_cgraph" id="main_8cpp_a98ec2c327bb359692043e43a6805f486_cgraph">
+<area shape="rect" id="node2" href="main_8cpp.html#a61e906382bb4ca6502934aac20f7e362" title="Computes the points for the normal distribution curve. " alt="" coords="140,5,283,32"/>
+</map>
+</div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="main_8cpp_a98ec2c327bb359692043e43a6805f486_icgraph.png" border="0" usemap="#main_8cpp_a98ec2c327bb359692043e43a6805f486_icgraph" alt=""/></div>
+<map name="main_8cpp_a98ec2c327bb359692043e43a6805f486_icgraph" id="main_8cpp_a98ec2c327bb359692043e43a6805f486_icgraph">
+<area shape="rect" id="node2" href="main_8cpp.html#a3c04138a5bfe5d72780bb7e82a18e627" title="The main function initializes the program and enters the GLUT main loop. " alt="" coords="140,5,191,32"/>
+</map>
+</div>
+
 </div>
 </div>
 <a id="a7a3bcf29c9207c9e1d8b5c5038528334"></a>
@@ -509,79 +1009,26 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Callback function for the top-level menu. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">id</td><td>The menu item identifier. </td></tr>
+  </table>
+  </dd>
+</dl>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="main_8cpp_a7a3bcf29c9207c9e1d8b5c5038528334_icgraph.png" border="0" usemap="#main_8cpp_a7a3bcf29c9207c9e1d8b5c5038528334_icgraph" alt=""/></div>
+<map name="main_8cpp_a7a3bcf29c9207c9e1d8b5c5038528334_icgraph" id="main_8cpp_a7a3bcf29c9207c9e1d8b5c5038528334_icgraph">
+<area shape="rect" id="node2" href="main_8cpp.html#a84e8aba32191c603553509d5248ee4b5" title="Creates the right&#45;click context menu for the application. " alt="" coords="155,5,245,32"/>
+<area shape="rect" id="node3" href="main_8cpp.html#a3c04138a5bfe5d72780bb7e82a18e627" title="The main function initializes the program and enters the GLUT main loop. " alt="" coords="293,5,344,32"/>
+</map>
+</div>
+
 </div>
 </div>
 <h2 class="groupheader">Variable Documentation</h2>
-<a id="aa8507650e5b0fe8283f3eb183a4e34ae"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa8507650e5b0fe8283f3eb183a4e34ae">&#9670;&nbsp;</a></span>axis_x_max</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">float axis_x_max</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a0038246c6d0800579870ad21d2cb5de8"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a0038246c6d0800579870ad21d2cb5de8">&#9670;&nbsp;</a></span>axis_x_min</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">float axis_x_min</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a41189b0acd14072d54b62eee107c77f0"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a41189b0acd14072d54b62eee107c77f0">&#9670;&nbsp;</a></span>axis_y_max</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">float axis_y_max</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="ae0dc3edddb8ab6ae2639c34fb08dd5bd"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae0dc3edddb8ab6ae2639c34fb08dd5bd">&#9670;&nbsp;</a></span>axis_y_min</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">float axis_y_min</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a75a030c1ac7bfa856d51cf4bfaedecb6"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a75a030c1ac7bfa856d51cf4bfaedecb6">&#9670;&nbsp;</a></span>currentFile</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">string currentFile</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
 <a id="a9d78f7a1a6619e61e8052c82da2b8a45"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a9d78f7a1a6619e61e8052c82da2b8a45">&#9670;&nbsp;</a></span>curveType</h2>
 
@@ -593,6 +1040,8 @@ Variables</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Type of the theoretical distribution curve (0 for normal, 1 for exponential). </p>
 
 </div>
 </div>
@@ -608,6 +1057,8 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>X-values of the theoretical curve. </p>
+
 </div>
 </div>
 <a id="a6c8f4e237e8e6bd9ecdde3919b0a4fba"></a>
@@ -622,6 +1073,8 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Y-values of the theoretical curve. </p>
+
 </div>
 </div>
 <a id="a49792ffe97500310c4dbf057109feb9f"></a>
@@ -631,10 +1084,12 @@ Variables</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">float* dataset</td>
+          <td class="memname">float* dataset = nullptr</td>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Pointer to the dataset array. </p>
 
 </div>
 </div>
@@ -645,38 +1100,44 @@ Variables</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">float* endPoints</td>
+          <td class="memname">float* endPoints = nullptr</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
+<p>Endpoints of the histogram intervals. </p>
+
 </div>
 </div>
-<a id="a1919d37919306ece48344c9b78f2f49c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1919d37919306ece48344c9b78f2f49c">&#9670;&nbsp;</a></span>fileName1</h2>
+<a id="ac81f9269c8d57eed4d5b56f054fc84de"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac81f9269c8d57eed4d5b56f054fc84de">&#9670;&nbsp;</a></span>fileName</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">char* fileName1</td>
+          <td class="memname">std::string fileName = &quot;5.dat&quot;</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
+<p>Name of the data file to read. </p>
+
 </div>
 </div>
-<a id="a5907c9b35ea0c7552349afe8ffca918f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a5907c9b35ea0c7552349afe8ffca918f">&#9670;&nbsp;</a></span>fileName2</h2>
+<a id="aa770d80493fae04dd6a59446cceb8e75"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa770d80493fae04dd6a59446cceb8e75">&#9670;&nbsp;</a></span>filePath</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">char * fileName2</td>
+          <td class="memname">std::string filePath = &quot;Data/&quot;</td>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Path to the data directory. </p>
 
 </div>
 </div>
@@ -687,24 +1148,44 @@ Variables</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">int height = 600</td>
+          <td class="memname">int height = 800</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
+<p>Window height. </p>
+
 </div>
 </div>
-<a id="ab53db8e89ce5e334bfc0b19b65e9cc85"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab53db8e89ce5e334bfc0b19b65e9cc85">&#9670;&nbsp;</a></span>lamda</h2>
+<a id="acac4a565486bad0b88b62387d8a5d891"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acac4a565486bad0b88b62387d8a5d891">&#9670;&nbsp;</a></span>lambda</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">float lamda = 1</td>
+          <td class="memname">float lambda = 1</td>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Lambda parameter for the exponential distribution. </p>
+
+</div>
+</div>
+<a id="afa6830ed873b30748f4ddde9b39554f5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afa6830ed873b30748f4ddde9b39554f5">&#9670;&nbsp;</a></span>maxCurveY</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float maxCurveY = -1</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Maximum Y-value in the theoretical curve. </p>
 
 </div>
 </div>
@@ -720,6 +1201,8 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Maximum value in the dataset. </p>
+
 </div>
 </div>
 <a id="a4009ccffbcbaa71f27a100996637ef55"></a>
@@ -733,6 +1216,8 @@ Variables</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Maximum probability value in the histogram. </p>
 
 </div>
 </div>
@@ -748,6 +1233,8 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Minimum value in the dataset. </p>
+
 </div>
 </div>
 <a id="a4df8d1d064e0269c44c34fd4a7a3b705"></a>
@@ -761,6 +1248,8 @@ Variables</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Mean (mu) parameter for the normal distribution. </p>
 
 </div>
 </div>
@@ -776,6 +1265,8 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Number of points to compute in the theoretical curve. </p>
+
 </div>
 </div>
 <a id="a4b619ee914b6d9d8490509e1db377731"></a>
@@ -789,6 +1280,8 @@ Variables</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Number of data points in the dataset. </p>
 
 </div>
 </div>
@@ -804,6 +1297,8 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Number of intervals (bins) in the histogram. </p>
+
 </div>
 </div>
 <a id="a58473e61d489ab3f35a0b6f2499f5672"></a>
@@ -818,6 +1313,8 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Step size for changing parameter values. </p>
+
 </div>
 </div>
 <a id="a6a90ae33df734ef69a88ff3e98e51ba8"></a>
@@ -827,10 +1324,12 @@ Variables</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">float* prob</td>
+          <td class="memname">float* prob = nullptr</td>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Probabilities for each histogram interval. </p>
 
 </div>
 </div>
@@ -846,6 +1345,8 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Standard deviation (sigma) parameter for the normal distribution. </p>
+
 </div>
 </div>
 <a id="a2474a5474cbff19523a51eb1de01cda4"></a>
@@ -860,61 +1361,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-</div>
-</div>
-<a id="a7510815f15b91f88cbb0a144aba5b211"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a7510815f15b91f88cbb0a144aba5b211">&#9670;&nbsp;</a></span>world_x_max</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">float world_x_max</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a37fc98a738cb4c75119f17c232ff8fd7"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a37fc98a738cb4c75119f17c232ff8fd7">&#9670;&nbsp;</a></span>world_x_min</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">float world_x_min</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="aa4969703718a8d963578239158c3c78e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa4969703718a8d963578239158c3c78e">&#9670;&nbsp;</a></span>world_y_max</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">float world_y_max</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="ae6095ca0f3d6d9dde4b43db1d18b07bd"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae6095ca0f3d6d9dde4b43db1d18b07bd">&#9670;&nbsp;</a></span>world_y_min</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">float world_y_min</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
+<p>Window width. </p>
 
 </div>
 </div>

@@ -1,0 +1,8 @@
+<map id="fileMenuFunction" name="fileMenuFunction">
+<area shape="rect" id="node2" href="$main_8cpp.html#a4b8b57ed8823c669f6b7807e9b836b7f" title="Reads the dataset from a file and computes the minimum, maximum, mean, and standard deviation..." alt="" coords="224,31,292,57"/>
+<area shape="rect" id="node5" href="$main_8cpp.html#a0931fb7723884495fa0f9cc9abb06fcd" title="Computes the probabilities for the histogram based on the dataset and number of intervals. " alt="" coords="191,81,325,108"/>
+<area shape="rect" id="node6" href="$main_8cpp.html#a61e906382bb4ca6502934aac20f7e362" title="Computes the points for the normal distribution curve. " alt="" coords="187,132,329,159"/>
+<area shape="rect" id="node7" href="$main_8cpp.html#ad061a8419a9975970ffc0991b9891e5f" title="Computes the points for the exponential distribution curve. " alt="" coords="173,183,343,209"/>
+<area shape="rect" id="node3" href="$main_8cpp.html#a2a6db4d94910ad759d5ae53b11f7daef" title="Computes the mean (average) of the given data array. " alt="" coords="427,5,531,32"/>
+<area shape="rect" id="node4" href="$main_8cpp.html#a556823fe870225f1b3f79492eeb264ab" title="Computes the standard deviation of the given data array. " alt="" coords="391,56,567,83"/>
+</map>

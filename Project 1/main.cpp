@@ -12,77 +12,114 @@
 #define _USE_MATH_DEFINES
 #include <math.h>
 
-// Input data
+/**
+ * @brief Path to the data directory.
+ */
 std::string filePath = "Data/";
-std::string fileName1 = "5.dat";
-std::string fileName2 = "18.dat";
-float* dataset = nullptr;
-int numDataPoints;
-float minimum, maximum;
 
-// Histogram
+/**
+ * @brief Name of the data file to read.
+ */
+std::string fileName = "5.dat";
+
+/**
+ * @brief Pointer to the dataset array.
+ */
+float* dataset = nullptr;
+
+/**
+ * @brief Number of data points in the dataset.
+ */
+int numDataPoints;
+
+/**
+ * @brief Minimum value in the dataset.
+ */
+float minimum;
+
+/**
+ * @brief Maximum value in the dataset.
+ */
+float maximum;
+
+/**
+ * @brief Number of intervals (bins) in the histogram.
+ */
 int numIntervals = 30;
+
+/**
+ * @brief Endpoints of the histogram intervals.
+ */
 float* endPoints = nullptr;
+
+/**
+ * @brief Probabilities for each histogram interval.
+ */
 float* prob = nullptr;
+
+/**
+ * @brief Maximum probability value in the histogram.
+ */
 float maxProb = -1;
 
-// Theoretical distributions
+/**
+ * @brief Type of the theoretical distribution curve (0 for normal, 1 for exponential).
+ */
 int curveType = 0;
+
+/**
+ * @brief Number of points to compute in the theoretical curve.
+ */
 int numCurvePoints = 100;
+
+/**
+ * @brief X-values of the theoretical curve.
+ */
 float* curveX = new float[numCurvePoints];
+
+/**
+ * @brief Y-values of the theoretical curve.
+ */
 float* curveY = new float[numCurvePoints];
+
+/**
+ * @brief Maximum Y-value in the theoretical curve.
+ */
 float maxCurveY = -1;
 
-// Parameters
-float mu = 0, sigma = 1; // Normal distribution
-float lambda = 1; // Exponential distribution
-float parameterStep = 0.05; // Step size for changing parameter values
+/**
+ * @brief Mean (mu) parameter for the normal distribution.
+ */
+float mu = 0;
 
-// Drawing parameters
-int width = 800, height = 600;
-float world_x_min, world_x_max, world_y_min, world_y_max;
-float axis_x_min, axis_x_max, axis_y_min, axis_y_max;
+/**
+ * @brief Standard deviation (sigma) parameter for the normal distribution.
+ */
+float sigma = 1;
 
-// Compute all the points for normal distribution
-void computeNormalFunc(float mu, float sigma) {
-	// Determine the step size and compute the arrays curveX and curveY
-	// (numCurvePoints).
-	float xRange = maximum - minimum;
-	float xStep = xRange / (numCurvePoints - 1);
+/**
+ * @brief Lambda parameter for the exponential distribution.
+ */
+float lambda = 1;
 
-	maxCurveY = -FLT_MAX;
+/**
+ * @brief Step size for changing parameter values.
+ */
+float parameterStep = 0.05;
 
-	for (int i = 0; i < numCurvePoints; ++i) {
-		curveX[i] = minimum + i * xStep;
-		float exponent = -0.5f * pow((curveX[i] - mu) / sigma, 2);
-		curveY[i] = (1.0f / (sigma * sqrt(2 * M_PI))) * exp(exponent);
+/**
+ * @brief Window width.
+ */
+int width = 800;
 
-		if (curveY[i] > maxCurveY) {
-			maxCurveY = curveY[i];
-		}
+/**
+ * @brief Window height.
+ */
+int height = 800;
 
-	}
-}
-
-// Compute all the points for exponential distribution
-void computeExponentialFunc(float lambda) {
-	// Determine the step size and compute the arrays curveX and curveY
-	// (numCurvePoints).
-	float xRange = maximum - minimum;
-	float xStep = xRange / (numCurvePoints - 1);
-
-	maxCurveY = -FLT_MAX;
-
-	for (int i = 0; i < numCurvePoints; ++i) {
-		curveX[i] = minimum + i * xStep;
-		curveY[i] = lambda * exp(-lambda * (curveX[i] - minimum));
-
-		if (curveY[i] > maxCurveY) {
-			maxCurveY = curveY[i];
-		}
-	}
-}
-
+/**
+ * @brief Display callback function for rendering the histogram and theoretical distribution.
+ */
 void display(void) {
 	glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 	glLoadIdentity();
@@ -99,11 +136,12 @@ void display(void) {
 		glVertex2f(0.05f, 0.95f); // Extend upwards (positive Y)
 	glEnd();
 
+	glColor3f(0.05f, 0.57f, 0.96f);
 	printString(0.90f, 0.02f, "Data"); // X
 	printString(0.06f, 0.93f, "Probability Density"); // Y
+	printString(0.06f, 0.89f, std::to_string(maxCurveY));
 
-	glColor3f(0.2f, 0.7f, 0.3f);
-	printString(0.70f, 0.93f, "File: " + fileName1);
+	printString(0.70f, 0.93f, "File: " + fileName);
 	printString(0.70f, 0.90f, "Min: " + std::to_string(minimum));
 	printString(0.70f, 0.87f, "Max: " + std::to_string(maximum));
 	printString(0.70f, 0.84f, "Num of Intervals: " + std::to_string(numIntervals));
@@ -122,6 +160,7 @@ void display(void) {
 		float barHeight = (prob[i] / maxProb) * 0.8f; // Scale to fit within the plot area
 
 		// Draw the bars
+		glColor3f(0.98f, 0.33f, 0.33f);
 		glBegin(GL_QUADS);
 			glVertex2f(x, y);
 			glVertex2f(x + barWidth, y);
@@ -131,22 +170,28 @@ void display(void) {
 	}
 
 	// Draw the theoretical curve
-	glColor3f(1.0f, 0.2f, 0.2f);
+	glColor3f(0.78f, 0.18f, 0.18f);
 	if (curveType == 0) {
 		printString(0.70f, 0.78f, "Distribution: Normal");
 	} else {
 		printString(0.70f, 0.78f, "Distribution: Exponential");
 	}
 
-	std::stringstream ssMu, ssSigma;
+	std::stringstream ssMu, ssSigma, ssBeta;
 	ssMu << std::fixed << std::setprecision(2) << mu;
 	ssSigma << std::fixed << std::setprecision(2) << sigma;
+	ssBeta << std::fixed << std::setprecision(2) << 1 / lambda;
 
-	printString(0.70f, 0.75f, "Mu: " + ssMu.str());
-	printString(0.70f, 0.72f, "Sigma: " + ssSigma.str());
+	if (fileName != "expo.dat") {
+		printString(0.70f, 0.75f, "Mu: " + ssMu.str());
+		printString(0.70f, 0.72f, "Sigma: " + ssSigma.str());
+	} else {
+		printString(0.70f, 0.75f, "Beta: " + ssBeta.str());
+	}
 
 	glLineWidth(2.0f);
 
+	glColor3f(0.47f, 0.80f, 1.0f);
 	glBegin(GL_LINE_STRIP);
 	for (int i = 0; i < numCurvePoints; ++i) {
 		// Map curveX and curveY to the plotting area		
@@ -156,21 +201,23 @@ void display(void) {
 	}
 	glEnd();
 
-	// Display the maximum probability value
-	// Draw probability histogram
-	// Draw the theoretical distribution using thicker lines.
 	// Compute the tbarWidthop-left position of the annotation
-	// Draw theoretical distributions
 	glFlush();
 	glutSwapBuffers();
 }
 
+/**
+ * @brief Initializes OpenGL settings.
+ */
 void init(void) {
 	glClearColor(0.0, 0.0, 0.0, 0.0);
 	glPolygonMode(GL_FRONT_AND_BACK, GL_LINE);
 }
 
-// Compute the probability for the histogram (vertical axis)
+/**
+ * @brief Computes the probabilities for the histogram based on the dataset and number of intervals.
+ * @param numIntervals The number of intervals (bins) in the histogram.
+ */
 void computeProbability(int numIntervals) {
 	if (endPoints != nullptr) {
 		delete[] endPoints;
@@ -214,6 +261,86 @@ void computeProbability(int numIntervals) {
 	}
 }
 
+/**
+ * @brief Computes the points for the normal distribution curve.
+ * @param mu The mean value of the normal distribution.
+ * @param sigma The standard deviation of the normal distribution.
+ */
+void computeNormalFunc(float mu, float sigma) {
+	// Determine the step size and compute the arrays curveX and curveY
+	// (numCurvePoints).
+	float xRange = maximum - minimum;
+	float xStep = xRange / (numCurvePoints - 1);
+
+	maxCurveY = -FLT_MAX;
+
+	for (int i = 0; i < numCurvePoints; ++i) {
+		curveX[i] = minimum + i * xStep;
+		float exponent = -0.5f * pow((curveX[i] - mu) / sigma, 2);
+		curveY[i] = (1.0f / (sigma * sqrt(2 * M_PI))) * exp(exponent);
+
+		if (curveY[i] > maxCurveY) {
+			maxCurveY = curveY[i];
+		}
+
+	}
+}
+
+/**
+ * @brief Computes the points for the exponential distribution curve.
+ * @param lambda The lambda parameter of the exponential distribution.
+ */
+void computeExponentialFunc(float lambda) {
+	// Determine the step size and compute the arrays curveX and curveY
+	// (numCurvePoints).
+	float xRange = maximum - minimum;
+	float xStep = xRange / (numCurvePoints - 1);
+
+	maxCurveY = -FLT_MAX;
+
+	for (int i = 0; i < numCurvePoints; ++i) {
+		curveX[i] = minimum + i * xStep;
+		curveY[i] = lambda * exp(-lambda * (curveX[i] - minimum));
+
+		if (curveY[i] > maxCurveY) {
+			maxCurveY = curveY[i];
+		}
+	}
+}
+
+/**
+ * @brief Computes the mean (average) of the given data array.
+ * @param data Pointer to the data array.
+ * @param size Number of elements in the data array.
+ * @return The computed mean value.
+ */
+float computeMean(float* data, int size) {
+	float sum = 0.0f;
+	for (int i = 0; i < size; ++i) {
+		sum += data[i];
+	}
+	return sum / size;
+}
+
+/**
+ * @brief Computes the standard deviation of the given data array.
+ * @param data Pointer to the data array.
+ * @param size Number of elements in the data array.
+ * @param mean The mean value of the data array.
+ * @return The computed standard deviation.
+ */
+float computeStandardDeviation(float* data, int size, float mean) {
+	float sum = 0.0f;
+	for (int i = 0; i < size; ++i) {
+		sum += pow(data[i] - mean, 2);
+	}
+	return sqrt(sum / size);
+}
+
+/**
+ * @brief Reads the dataset from a file and computes the minimum, maximum, mean, and standard deviation.
+ * @param fileName The name of the file to read.
+ */
 void readFile(std::string fileName) {
 	std::ifstream inFile(fileName);
 	if (!inFile.is_open()) {
@@ -236,11 +363,27 @@ void readFile(std::string fileName) {
 			maximum = dataset[i];
 	}
 
+	mu = computeMean(dataset, numDataPoints);
+	sigma = computeStandardDeviation(dataset, numDataPoints, mu);
+
+	if (fileName == filePath + "expo.dat") {
+		lambda = 1.0 / mu;
+		std::cout << "Lambda: " << lambda << std::endl;
+	}
+
 	std::cout << "Number of Data Points: " << numDataPoints << std::endl;
 	std::cout << "Minimum: " << minimum << std::endl;
 	std::cout << "Maximum: " << maximum << std::endl;
+	std::cout << "Mean: " << mu << std::endl;
+	std::cout << "Standard Deviation: " << sigma << std::endl;
 }
 
+/**
+ * @brief Keyboard callback function to handle standard key presses.
+ * @param key The key that was pressed.
+ * @param x The x-coordinate of the mouse when the key was pressed.
+ * @param y The y-coordinate of the mouse when the key was pressed.
+ */
 void keyboard(unsigned char key, int x, int y) {
 	switch (key) {
 		case 'q':
@@ -252,9 +395,8 @@ void keyboard(unsigned char key, int x, int y) {
 			numIntervals += 5;
 			break;
 		case '-':
-			if (numIntervals > 5) {
+			if (numIntervals > 5)
 				numIntervals -= 5;
-			}
 			break;
 	}
 
@@ -262,51 +404,65 @@ void keyboard(unsigned char key, int x, int y) {
 	glutPostRedisplay();
 }
 
-// Update the parameters and theoretical distributions
+/**
+ * @brief Special keyboard callback function to handle special key presses (e.g., arrow keys).
+ * @param key The special key that was pressed.
+ * @param x The x-coordinate of the mouse when the key was pressed.
+ * @param y The y-coordinate of the mouse when the key was pressed.
+ */
 void specialKey(int key, int x, int y) {
 	switch (key) {
 	case GLUT_KEY_LEFT:
 		mu -= parameterStep;
+		if (mu < 0.0) mu = 0.0;
 		break;
 	case GLUT_KEY_RIGHT:
 		mu += parameterStep;
+		if (mu >= 5.0) mu = 4.99;
 		break;
 	case GLUT_KEY_UP:
 		sigma += parameterStep;
+		if (sigma >= 3.0) sigma = 2.99;
 		break;
 	case GLUT_KEY_DOWN:
 		sigma -= parameterStep;
-		if (sigma <= 0) sigma = parameterStep;
+		if (sigma <= 0.02) sigma = 0.03;
 		break;
 	}
 	computeNormalFunc(mu, sigma);
 	glutPostRedisplay();
 }
 
+/**
+ * @brief Callback function for the top-level menu.
+ * @param id The menu item identifier.
+ */
 void topMenuFunc(int id) {
 	if (id == 0) {
 		exit(0);
 	}
 }
 
-// Read file.
-// Update projection since the data has changed.
+/**
+ * @brief Callback function for the file menu.
+ * @param id The menu item identifier.
+ */
 void fileMenuFunction(int id) {
 	switch (id) {
 		case 1:
-			fileName1 = "normal.dat";
+			fileName = "normal.dat";
 			break;
 		case 2:
-			fileName1 = "expo.dat";
+			fileName = "expo.dat";
 			break;
 		case 3:
-			fileName1 = "5.dat";
+			fileName = "5.dat";
 			break;
 		case 4:
-			fileName1 = "18.dat";
+			fileName = "18.dat";
 			break;
 	}
-	readFile(filePath + fileName1);
+	readFile(filePath + fileName);
 	computeProbability(numIntervals);
 
 	if (curveType == 0) {
@@ -318,7 +474,10 @@ void fileMenuFunction(int id) {
 	glutPostRedisplay();
 }
 
-// Update curveType based on the menu selection and recompute the theoretical distribution.
+/**
+ * @brief Callback function for the distribution menu.
+ * @param id The menu item identifier.
+ */
 void funcMenuFunction(int id) {
 	switch (id) {
 		case 1: 
@@ -338,9 +497,10 @@ void funcMenuFunction(int id) {
 	glutPostRedisplay();
 }
 
-// Update the number of intervals and recomputed the histogram.
-// Update projection since the histogram has changed due to the change of number
-// of bars.
+/**
+ * @brief Callback function for the histogram menu.
+ * @param id The menu item identifier.
+ */
 void histogramMenuFunction(int id) {
 	switch (id) {
 		case 1:
@@ -358,7 +518,10 @@ void histogramMenuFunction(int id) {
 	glutPostRedisplay();
 }
 
-// Update the parameter step size.
+/**
+ * @brief Callback function for the parameter step menu.
+ * @param id The menu item identifier.
+ */
 void parameterStepMenuFunction(int id) {
 	switch (id) {
 		case 1:
@@ -373,12 +536,15 @@ void parameterStepMenuFunction(int id) {
 	}
 }
 
+/**
+ * @brief Creates the right-click context menu for the application.
+ */
 void createMenu() {
 	int fileMenu = glutCreateMenu(fileMenuFunction);
 	glutAddMenuEntry("normal.dat", 1);
 	glutAddMenuEntry("expo.dat", 2);
-	glutAddMenuEntry("File 1", 3);
-	glutAddMenuEntry("File 2", 4);
+	glutAddMenuEntry("5.dat", 3);
+	glutAddMenuEntry("18.dat", 4);
 
 	int distributionMenu = glutCreateMenu(funcMenuFunction);
 	glutAddMenuEntry("Normal", 1);
@@ -404,25 +570,41 @@ void createMenu() {
 	glutAttachMenu(GLUT_RIGHT_BUTTON);
 }
 
+/**
+ * @brief Reshape callback function to handle window resizing.
+ * @param w The new width of the window.
+ * @param h The new height of the window.
+ */
 void reshape(int w, int h) {
-	glViewport(0, 0, w, h);
+	float aspectRatio = (float)w / (float)h;
 
 	glMatrixMode(GL_PROJECTION);
 	glLoadIdentity();
 
-	// Setup a 2D orthographic projection (left, right, bottom, top)
-	gluOrtho2D(0.0, 1.0, 0.0, 1.0); // Bottom-left corner is (0,0), top-right is (1,1)
+	if (aspectRatio >= 1.0f) {
+		gluOrtho2D(0.0, aspectRatio, 0.0, 1.0);
+	} else {
+		gluOrtho2D(0.0, 1.0, 0.0, 1.0 / aspectRatio);
+	}
+
+	glViewport(0, 0, w, h);
 
 	glMatrixMode(GL_MODELVIEW);
 	glLoadIdentity();
 }
 
+/**
+ * @brief The main function initializes the program and enters the GLUT main loop.
+ * @param argc The number of command-line arguments.
+ * @param argv The array of command-line arguments.
+ * @return Exit status.
+ */
 int main(int argc, char** argv) {
 	dataset = nullptr;
 	endPoints = nullptr;
 	prob = nullptr;
 
-	readFile(filePath + fileName1);
+	readFile(filePath + fileName);
 	computeProbability(numIntervals);
 
 	if (curveType == 0) {

@@ -1,4 +1,20 @@
 <map id="main" name="main">
-<area shape="rect" id="node2" href="$main_8cpp.html#a1e5b20fed15743656bb6d2e6a6ea6269" title="display" alt="" coords="107,5,170,32"/>
-<area shape="rect" id="node3" href="$main_8cpp.html#a25a40b6614565f755233080a384c35f1" title="initialize" alt="" coords="104,56,173,83"/>
+<area shape="rect" id="node2" href="$main_8cpp.html#a4b8b57ed8823c669f6b7807e9b836b7f" title="Reads the dataset from a file and computes the minimum, maximum, mean, and standard deviation..." alt="" coords="531,246,599,272"/>
+<area shape="rect" id="node5" href="$main_8cpp.html#a0931fb7723884495fa0f9cc9abb06fcd" title="Computes the probabilities for the histogram based on the dataset and number of intervals. " alt="" coords="498,131,631,158"/>
+<area shape="rect" id="node6" href="$main_8cpp.html#a61e906382bb4ca6502934aac20f7e362" title="Computes the points for the normal distribution curve. " alt="" coords="493,486,636,512"/>
+<area shape="rect" id="node7" href="$main_8cpp.html#ad061a8419a9975970ffc0991b9891e5f" title="Computes the points for the exponential distribution curve. " alt="" coords="480,410,649,436"/>
+<area shape="rect" id="node8" href="$main_8cpp.html#a2858154e2009b0e6e616f313177762bc" title="Initializes OpenGL settings. " alt="" coords="130,232,169,259"/>
+<area shape="rect" id="node9" href="$main_8cpp.html#a4ea013001a5fb47853d0fab8f8de35cd" title="Display callback function for rendering the histogram and theoretical distribution. " alt="" coords="118,106,181,132"/>
+<area shape="rect" id="node11" href="$main_8cpp.html#acc1ffe65e6869931318610cae7210078" title="Reshape callback function to handle window resizing. " alt="" coords="115,334,183,360"/>
+<area shape="rect" id="node12" href="$main_8cpp.html#aef7ba2f69afb2d954545f64c7fe24b14" title="Keyboard callback function to handle standard key presses. " alt="" coords="112,55,187,82"/>
+<area shape="rect" id="node13" href="$main_8cpp.html#a98ec2c327bb359692043e43a6805f486" title="Special keyboard callback function to handle special key presses (e.g., arrow keys). " alt="" coords="106,511,193,538"/>
+<area shape="rect" id="node14" href="$main_8cpp.html#a84e8aba32191c603553509d5248ee4b5" title="Creates the right&#45;click context menu for the application. " alt="" coords="104,283,195,310"/>
+<area shape="rect" id="node3" href="$main_8cpp.html#a2a6db4d94910ad759d5ae53b11f7daef" title="Computes the mean (average) of the given data array. " alt="" coords="733,220,837,247"/>
+<area shape="rect" id="node4" href="$main_8cpp.html#a556823fe870225f1b3f79492eeb264ab" title="Computes the standard deviation of the given data array. " alt="" coords="697,271,873,298"/>
+<area shape="rect" id="node10" href="$utility_8cpp.html#a6d76c5087efd87c79ef67d791a152ccb" title="printString" alt="" coords="297,106,378,132"/>
+<area shape="rect" id="node15" href="$main_8cpp.html#afff305262d54ff700b916f1d64fb77e3" title="Callback function for the file menu. " alt="" coords="277,308,397,335"/>
+<area shape="rect" id="node16" href="$main_8cpp.html#af0700a7721e27d43f34b63681ea65cd5" title="Callback function for the distribution menu. " alt="" coords="273,410,401,436"/>
+<area shape="rect" id="node17" href="$main_8cpp.html#afc0f28ef3902281e286021b87b6c526e" title="Callback function for the histogram menu. " alt="" coords="257,207,418,234"/>
+<area shape="rect" id="node18" href="$main_8cpp.html#a152813776642300c309cea4b5e1617d0" title="Callback function for the parameter step menu. " alt="" coords="243,359,432,386"/>
+<area shape="rect" id="node19" href="$main_8cpp.html#a7a3bcf29c9207c9e1d8b5c5038528334" title="Callback function for the top&#45;level menu. " alt="" coords="287,258,388,284"/>
 </map>

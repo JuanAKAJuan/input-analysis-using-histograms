@@ -1,0 +1,6 @@
+<map id="computeStandardDeviation" name="computeStandardDeviation">
+<area shape="rect" id="node2" href="$main_8cpp.html#a4b8b57ed8823c669f6b7807e9b836b7f" title="Reads the dataset from a file and computes the minimum, maximum, mean, and standard deviation..." alt="" coords="229,31,297,57"/>
+<area shape="rect" id="node3" href="$main_8cpp.html#afff305262d54ff700b916f1d64fb77e3" title="Callback function for the file menu. " alt="" coords="345,5,465,32"/>
+<area shape="rect" id="node5" href="$main_8cpp.html#a3c04138a5bfe5d72780bb7e82a18e627" title="The main function initializes the program and enters the GLUT main loop. " alt="" coords="652,31,703,57"/>
+<area shape="rect" id="node4" href="$main_8cpp.html#a84e8aba32191c603553509d5248ee4b5" title="Creates the right&#45;click context menu for the application. " alt="" coords="513,5,604,32"/>
+</map>
